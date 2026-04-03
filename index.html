@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Dilkash Perwez | Data Analyst Portfolio</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome & Devicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background WebGL Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="data-stream"></div>
+            <h1 class="loader-text">Loading Data...</h1>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">MDP.<span>data</span></div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#journey" class="nav-link">Journey</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="title">Md Dilkash <span class="gradient-text">Perwez</span></h1>
+                <h2 class="subtitle">Data Analyst & Data Science Enthusiast</h2>
+                <div class="typing-container">
+                    <span class="static-text">Expertise in </span>
+                    <span id="typing-text"></span><span class="cursor-blink">_</span>
+                </div>
+                <p class="tagline">"Turning Data into Actionable Insights"</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary magnet">View Projects</a>
+                    <a href="#contact" class="btn btn-outline magnet">Contact Me</a>
+                </div>
+                <div class="cta-group" style="margin-top: 1.5rem;">
+                    <a href="assets/CV.pdf" download="Md_Dilkash_Perwez_CV.pdf" class="btn btn-primary magnet"><i
+                            class="fas fa-download"></i> Download CV</a>
+                    <a href="assets/CV.pdf" target="_blank" class="btn btn-outline magnet"><i class="fas fa-eye"></i>
+                        Preview CV</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <p>Scroll</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            <div class="about-grid">
+                <div class="about-card glass">
+                    <div class="card-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Analytical Thinker</h3>
+                    <p>Driven by strategic curiosity, I excel at dissecting raw datasets to uncover compelling
+                        narratives. By synthesizing complex information, I translate ambiguity into high-impact,
+                        data-driven decisions that propel growth.</p>
+                </div>
+                <div class="about-card glass">
+                    <div class="card-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Adaptable Problem Solver</h3>
+                    <p>Thriving in dynamic environments, I seamlessly integrate new tools and analytical frameworks. I
+                        approach technical hurdles with agility, engineering robust solutions to overcome real-world
+                        challenges efficiently.</p>
+                </div>
+                <div class="about-card glass">
+                    <div class="card-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Continuous Learner</h3>
+                    <p>Passionate about the forefront of data science, I am committed to continuous upskilling across
+                        emerging technologies and advanced algorithms, ensuring my toolkit remains sharp and aligned
+                        with industry best practices.</p>
+                </div>
+            </div>
+            <div class="about-summary glass">
+                <div class="profile-container">
+                    <img src="assets/profile.jpg" alt="Md Dilkash Perwez" class="profile-img magnet">
+                </div>
+                <div class="about-text-content">
+                    <p>I am a forward-thinking <strong>Data Analyst and Data Science Enthusiast</strong> dedicated to
+                        bridging the gap between raw data and actionable business strategy. Leveraging a robust
+                        foundation in <strong>Python and Data Analysis</strong>, I specialize in transforming complex
+                        data landscapes into clear, intuitive insights. By combining rigorous <strong>Problem
+                            Solving</strong> with a mindset geared towards scalable <strong>Decision Making</strong>, I
+                        deliver solutions that optimize performance, uncover untapped opportunities, and drive
+                        sustainable growth. With a deep passion for impactful storytelling through data, I am ready to
+                        tackle complex challenges and deliver immediate value to modern tech teams.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <h2 class="section-title">Core <span class="gradient-text">Skills</span></h2>
+            <div class="skills-container">
+
+                <!-- 1. Languages -->
+                <div class="skill-category glass">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <p class="skill-desc">Proficient in writing efficient, scalable code for data analysis and problem
+                        solving.</p>
+                    <div class="skill-list-progress">
+                        <div class="skill-item">
+                            <div class="skill-info"><span><i class="devicon-python-plain colored"></i>
+                                    Python</span><span>90%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span><i class="fas fa-database" style="color: #4facfe;"></i>
+                                    SQL</span><span>85%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span><i class="devicon-cplusplus-plain colored"></i>
+                                    C++</span><span>80%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span><i class="devicon-r-plain colored"></i>
+                                    R</span><span>70%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span><i class="devicon-javascript-plain colored"></i>
+                                    JavaScript</span><span>60%</span></div>
+                            <div class="progress-bar">
+                                <div class="progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Frameworks / Libraries -->
+                <div class="skill-category glass">
+                    <h3><i class="fas fa-cubes"></i> Frameworks</h3>
+                    <p class="skill-desc">Experienced in data manipulation, visualization, and machine learning.</p>
+                    <div class="skill-list">
+                        <div class="skill-tag magnet"><i class="devicon-pandas-plain colored"></i> Pandas</div>
+                        <div class="skill-tag magnet"><i class="devicon-numpy-plain colored"></i> NumPy</div>
+                        <div class="skill-tag magnet"><i class="fas fa-chart-line" style="color: #4facfe;"></i>
+                            Matplotlib</div>
+                        <div class="skill-tag magnet"><i class="fas fa-chart-bar" style="color: #00f2fe;"></i> Seaborn
+                        </div>
+                        <div class="skill-tag magnet"><i class="devicon-scikitlearn-plain colored"></i> Scikit-Learn
+                        </div>
+                        <div class="skill-tag magnet"><i class="devicon-tensorflow-original colored"></i> TensorFlow
+                        </div>
+                        <div class="skill-tag magnet"><i class="fas fa-chart-pie" style="color: #e97627;"></i> Plotly
+                        </div>
+                        <div class="skill-tag magnet"><i class="fas fa-square-root-alt" style="color: #2b70c9;"></i>
+                            Statsmodels</div>
+                    </div>
+                </div>
+
+                <!-- 3. Tools -->
+                <div class="skill-category glass">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <p class="skill-desc">Hands-on experience with modern data tools and development environments.</p>
+                    <div class="skill-grid">
+                        <div class="tool-item magnet">
+                            <i class="fas fa-chart-bar" style="color: #f2c811; font-size: 2.5rem;"></i>
+                            <span>Power BI</span>
+                        </div>
+                        <div class="tool-item magnet">
+                            <i class="fas fa-file-excel" style="color: #1D6F42; font-size: 2.5rem;"></i>
+                            <span>Excel</span>
+                        </div>
+                        <div class="tool-item magnet">
+                            <i class="devicon-jupyter-plain colored" style="font-size: 2.5rem;"></i>
+                            <span>Jupyter</span>
+                        </div>
+                        <div class="tool-item magnet">
+                            <i class="devicon-github-original" style="font-size: 2.5rem; color: #fff;"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tool-item magnet">
+                            <i class="fas fa-chart-pie" style="color: #e97627; font-size: 2.5rem;"></i>
+                            <span>Tableau</span>
+                        </div>
+                        <div class="tool-item magnet">
+                            <i class="devicon-vscode-plain colored" style="font-size: 2.5rem;"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tool-item magnet">
+                            <i class="fas fa-code" style="color: #f9ab00; font-size: 2.5rem;"></i>
+                            <span>Colab</span>
+                        </div>
+                        <div class="tool-item magnet">
+                            <i class="devicon-postgresql-plain colored" style="font-size: 2.5rem;"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Core Concepts -->
+                <div class="skill-category glass">
+                    <h3><i class="fas fa-brain"></i> Core Concepts</h3>
+                    <p class="skill-desc">Strong foundation in analytical methodologies and machine learning theory.</p>
+                    <div class="skill-list">
+                        <div class="skill-tag magnet"><i class="fas fa-broom"></i> Data Cleaning</div>
+                        <div class="skill-tag magnet"><i class="fas fa-search"></i> EDA</div>
+                        <div class="skill-tag magnet"><i class="fas fa-chart-area"></i> Data Viz</div>
+                        <div class="skill-tag magnet"><i class="fas fa-robot"></i> ML Basics</div>
+                        <div class="skill-tag magnet"><i class="fas fa-chart-line"></i> Statistics</div>
+                        <div class="skill-tag magnet"><i class="fas fa-cogs"></i> Feature Eng.</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card glass tilt">
+                    <div class="project-img-wrapper">
+                        <img src="assets/hospital_dashboard.png" alt="Hospital Emergency Room Dashboard"
+                            class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Hospital Emergency Room Dashboard</h3>
+                        <p>Developed a comprehensive and interactive Hospital Emergency Room Dashboard using Power BI to
+                            analyze patient flow, waiting times, satisfaction levels, and operational efficiency.
+                            Performed end-to-end data processing including cleaning, transformation, and modeling to
+                            generate dynamic KPIs such as total patients, average wait time, admission rates, and
+                            referral patterns.</p>
+                        <p>Designed multiple analytical views including monthly trends, consolidated reports, and
+                            patient-level drill-downs to uncover insights across demographics (age, gender, race) and
+                            peak-hour activity. Identified operational bottlenecks and inefficiencies, enabling
+                            data-driven decisions to optimize resource allocation and improve overall emergency care
+                            performance.</p>
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>Excel</span>
+                            <span>Data Viz</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mddilkashperwez18/Hospital-Emergency-Room-Dashboard"
+                                target="_blank" class="icon-link"><i class="fab fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass tilt">
+                    <div class="project-img-wrapper">
+                        <img src="assets/sales_dashboard.png" alt="Sales Performance Dashboard" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Sales Performance Dashboard</h3>
+                        <p>Built a dynamic Sales Performance Analytics Dashboard using Excel to analyze over 5,000+
+                            sales records and extract actionable business insights. Utilized advanced Excel features
+                            such as Pivot Tables, Power Query, data modeling, and interactive slicers to track KPIs
+                            including revenue, profit, cost analysis, and regional performance.</p>
+                        <p>Conducted in-depth analysis across product categories, customer segments, and sales channels
+                            to identify top-performing products, high-value customers, and seasonal trends. Enabled
+                            data-driven decision-making by providing clear visual insights into business growth,
+                            profitability, and performance optimization strategies.</p>
+                        <div class="project-tags">
+                            <span>SQL</span>
+                            <span>Python</span>
+                            <span>Tableau</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mddilkashperwez18/Excel-Dashboard" target="_blank"
+                                class="icon-link"><i class="fab fa-github"></i> Repository</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Journey Section (Education & Certifications merged for flow) -->
+        <section id="journey" class="journey section">
+            <h2 class="section-title">My <span class="gradient-text">Journey</span></h2>
+            <div class="timeline-container">
+
+                <div class="timeline-column">
+                    <h3 class="column-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline glass">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>BTech in Computer Science & Engineering</h4>
+                                <span class="timeline-date">Lovely Professional University (LPU)</span>
+                                <p class="highlight">CGPA: 7.4</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Intermediate</h4>
+                                <span class="timeline-date">CBSE</span>
+                                <p class="highlight">80%</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Matriculation</h4>
+                                <span class="timeline-date">CBSE</span>
+                                <p class="highlight">86%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-column">
+                    <h3 class="column-title"><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="timeline glass">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>The Ultimate Data Science Course</h4>
+                                <span class="timeline-date">CodeWithHarry | Sep 2025</span>
+                                <a href="https://example.com/cert1" target="_blank" class="cert-link"><i
+                                        class="fas fa-external-link-alt"></i> View Certificate</a>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Database Structures and Management with MySQL</h4>
+                                <span class="timeline-date">Meta | Apr 2024</span>
+                                <a href="https://example.com/cert2" target="_blank" class="cert-link"><i
+                                        class="fas fa-external-link-alt"></i> View Certificate</a>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Introduction to Python</h4>
+                                <span class="timeline-date">Infosys Springboard</span>
+                                <a href="https://example.com/cert3" target="_blank" class="cert-link"><i
+                                        class="fas fa-external-link-alt"></i> View Certificate</a>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>DBMS Certification</h4>
+                                <span class="timeline-date">Meta</span>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 5px;"></p>
+                                <a href="https://example.com/cert4" target="_blank" class="cert-link"><i
+                                        class="fas fa-external-link-alt"></i> View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements" class="achievements section">
+            <h2 class="section-title">Key <span class="gradient-text">Achievements</span></h2>
+            <div class="achievement-cards">
+                <div class="achieve-card glass">
+                    <div class="achieve-icon" style="color: #ffd700; background: rgba(255, 215, 0, 0.1);"><i
+                            class="fas fa-star"></i></div>
+                    <h3>5★ in C++ on HackerRank</h3>
+                    <p>Demonstrated advanced algorithmic proficiency and problem-solving skills by achieving a top-tier
+                        rating.</p>
+                </div>
+                <div class="achieve-card glass">
+                    <div class="achieve-icon" style="color: #ffd700; background: rgba(255, 215, 0, 0.1);"><i
+                            class="fas fa-star"></i></div>
+                    <h3>5★ in Data Structures & Algorithms</h3>
+                    <p>Achieved expert-level DSA rating on HackerRank, validating strong algorithmic thinking and
+                        competitive coding abilities.</p>
+                </div>
+                <div class="achieve-card glass">
+                    <div class="achieve-icon" style="color: #00f2fe; background: rgba(0, 242, 254, 0.1);"><i
+                            class="fas fa-laptop-code"></i></div>
+                    <h3>Solved 150+ LeetCode Problems</h3>
+                    <p>Successfully tackled complex computational challenges, enhancing rapid problem-solving speed and
+                        logical adaptability.</p>
+                </div>
+                <div class="achieve-card glass">
+                    <div class="achieve-icon" style="color: #00f2fe; background: rgba(0, 242, 254, 0.1);"><i
+                            class="fas fa-code"></i></div>
+                    <h3>300+ Total Coding Challenges</h3>
+                    <p>Maintained consistent analytical momentum across platforms to effectively engineer optimal logic
+                        under constraints.</p>
+                </div>
+                <div class="achieve-card glass">
+                    <div class="achieve-icon" style="color: #e97627; background: rgba(233, 118, 39, 0.1);"><i
+                            class="fas fa-chart-pie"></i></div>
+                    <h3>Impactful Data Science Projects</h3>
+                    <p>Built end-to-end analytical dashboards and performed rigorous EDA to extract high-value business
+                        insights.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <div class="contact-container">
+                <div class="contact-info glass">
+                    <h3>Let's collaborate!</h3>
+                    <p>Whether you have a question about my projects, data models, or just want to connect — my inbox is
+                        always open.</p>
+                    <div class="social-links">
+                        <a href="mailto:mddilkashperwez@gmail.com" class="social-icon magnet" aria-label="Email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/mddilkashperwez18/" target="_blank"
+                            class="social-icon magnet" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/mddilkashperwez18" target="_blank" class="social-icon magnet"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form glass" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder="Your Name">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder="Your Email">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-status"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 Md Dilkash Perwez. Designed & Built with Data & Passion.</p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
